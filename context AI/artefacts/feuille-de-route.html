@@ -1,0 +1,78 @@
+<meta charset="utf-8">
+<title>Smart Immo — Feuille de route</title>
+<!--
+  GABARIT — artefact permanent d'un projet. Posé par /vlp-init, mis à jour à
+  l'ouverture et à la clôture de chaque chantier. Un seul par projet, il ne
+  change jamais d'URL. Remplace les <…>, ne renomme pas les marqueurs `ZONE:…`.
+
+  Colonne Tokens de ZONE:clos : même convention de coût que dans
+  artefact-chantier.html (posée là, pas recopiée ici).
+
+  La page de présentation du projet. `vlp.py feuille` y pose le reste : les
+  sous-listes par phase, la pastille du score, l'aide du score (AVL12) et la
+  ligne « Les autres pages » sous les liens du haut (AVL10).
+-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="vlp.css">
+
+<div class="page">
+  <header>
+    <div class="eyebrow">Feuille de route · alias <span class="mono">ds</span></div>
+    <h1>Projet Data Science « Smart Immo »</h1>
+    <p>Transformer les annonces immobilières brutes de l'énoncé en données propres, puis
+      comparer des modèles de Machine Learning sur deux problématiques métier. Pas une
+      appli en production.</p>
+  </header>
+
+  <nav class="sommaire" aria-label="Sommaire"><a href="#encours">Chantier en cours</a><a href="#todo">Chantiers possibles</a><a href="#clos">Chantiers clos</a></nav>
+  <nav class="pages" aria-label="Les autres pages">Les autres pages : <a href="https://claude.ai/artifact/JUhn7rpPzEFSskNSj5pRxr">la page du chantier</a></nav>
+
+  <section id="encours">
+    <h2>Chantier en cours</h2>
+    <!-- ZONE:encours — remplacé à chaque ouverture, remis à « aucun » à chaque clôture.
+         /tache n'y touche pas : l'avancement fiche par fiche est sur la page du chantier. -->
+    <div class="encours">
+      <div class="titre">Exploration des données (Partie 1) <span class="badge" data-etat="cours">en cours</span></div>
+      <div>Fiches <span class="mono">EXP1–EXP4</span> — <a href="https://claude.ai/artifact/JUhn7rpPzEFSskNSj5pRxr">la page du chantier</a></div>
+    </div>
+  </section>
+
+  <section id="todo">
+    <h2>Les chantiers possibles, dans l'ordre</h2>
+    <p class="resume-todo"><strong>5 chantiers possibles</strong> · 2 moyens, 3 gros · 4 bloqués · ≈21 fiches estimées</p>
+    <!-- ZONE:todo — miroir de la TODO ordonnée du fichier d'état ; le fichier reste la vérité -->
+    <ol class="todo">
+          <li class="carte-todo" data-taille="moyen" data-pret="oui"><span class="gauche"><span class="rang mono">1</span> <span class="badge" data-etat="cours">en cours</span></span><details><summary><span class="titre">Exploration (Partie 1)</span></summary><div class="detail">diagnostic de qualité et de structure, dans un notebook</div></details><span class="meta"><span class="seg">4 fiches</span></span></li>
+          <li class="carte-todo" data-taille="gros" data-pret="non"><span class="gauche"><span class="rang mono">2</span><span class="dep mono">← 1</span></span><details><summary><span class="titre">Nettoyage et pipeline (Partie 2)</span></summary><div class="detail">pipeline Scikit-learn reproductible, qualité avant/après, jeu préparé</div></details><span class="meta"><span class="seg">4–5 fiches</span></span></li>
+          <li class="carte-todo" data-taille="moyen" data-pret="non"><span class="gauche"><span class="rang mono">3</span><span class="dep mono">← 1</span></span><details><summary><span class="titre">Problématiques métier (Partie 3)</span></summary><div class="detail">deux problématiques justifiées : cible, variables, métrique, limites</div></details><span class="meta"><span class="seg">2 fiches</span></span></li>
+          <li class="carte-todo" data-taille="gros" data-pret="non"><span class="gauche"><span class="rang mono">4</span><span class="dep mono">← 2, 3</span></span><details><summary><span class="titre">Benchmark des modèles (Partie 4)</span></summary><div class="detail">modèles comparés sur un protocole commun, tableau, modèle retenu</div></details><span class="meta"><span class="seg">4–5 fiches</span></span></li>
+          <li class="carte-todo" data-taille="gros" data-pret="non"><span class="gauche"><span class="rang mono">5</span><span class="dep mono">← 4</span></span><details><summary><span class="titre">Synthèse et oral (Partie 5), puis extensions</span></summary><div class="detail">synthèse écrite, README ; FastAPI, Pydantic, TensorFlow en option</div></details><span class="meta"><span class="seg">3–5 fiches</span></span></li>
+        </ol>
+  </section>
+
+  <section id="clos">
+    <h2>Chantiers clos — ils ne se rejouent pas</h2>
+    <!-- ZONE:clos — une ligne ajoutée à chaque clôture, la plus récente en haut.
+         Colonne Tokens, total en pied de table et image des coûts absents
+         tant qu'aucun chantier clos ne porte de coût mesuré. -->
+    <details class="clos">
+      <summary><span class="resume-clos">0 chantier clos</span></summary>
+    <div class="tableau">
+      <table>
+        <thead>
+          <tr><th>Chantier</th><th>Fiches</th><th>Clos le</th><th>Ce qu'il a livré</th></tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    </details>
+  </section>
+
+  <footer>
+    <span>Lettres de fiche prises : <span class="mono">EXP</span></span>
+    <span>État détaillé : <span class="mono">context AI/01-etat.md</span></span>
+    <span>Mis à jour le <span class="mono">2026-11-02</span></span>
+  </footer>
+</div>
+<script src="vlp.js"></script>

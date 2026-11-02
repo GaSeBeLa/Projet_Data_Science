@@ -1,0 +1,78 @@
+<meta charset="utf-8">
+<title>Projet Data Science — Exploration des données</title>
+<!--
+  GABARIT — artefact d'un chantier. Publié par /chantier à l'ouverture,
+  mis à jour par /tache à chaque fiche. Remplace les <…> et ne renomme pas
+  les marqueurs `ZONE:…` : les commandes les cherchent tels quels.
+
+  Convention de coût — posée ici, référencée (jamais recopiée) par
+  artefact-feuille-de-route.html, tache.md et cloture.md : un nombre < 1000
+  s'affiche tel quel ; au-delà, "≈<arrondi 1 décimale><k|M> (<compte brut>)"
+  — virgule française, k = mille, M = million. Le compte brut reste toujours
+  visible à côté de l'arrondi.
+-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="vlp.css">
+
+<div class="page">
+  <header>
+    <div class="eyebrow">Projet Data Science · fiches EXP1–EXP4 · <a href="https://claude.ai/artifact/S19Mosvwg1zeVCgRnKa4aV">la feuille de route</a></div>
+    <h1>Exploration des données</h1>
+    <p>Un notebook de diagnostic qui suit les 7 points de la Partie 1 du PDF, chaque observation appuyée sur un compte calculé par le module smart_immo testé.</p>
+    <!-- ZONE:avancement — un span par fiche, dans l'ordre, même data-etat que la fiche -->
+    <div class="avancement">
+      <span data-etat="encours"></span><span></span><span></span><span></span>
+    </div>
+    <p class="mono" style="margin-top:.5rem">4 fiches · 0 faite · en cours : EXP1</p>
+  </header>
+
+  <!-- ZONE:bilan — remplie à la clôture, en même temps que « clos » en tête du fichier de fiches -->
+  <section hidden>
+    <h2>Chantier clos le </h2>
+    <div class="bilan">
+      <p></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Les fiches, dans l'ordre des dépendances</h2>
+    <!-- ZONE:fiches — data-etat vaut faite | encours | bloquee ; absent = à faire -->
+    <ul class="fiches">
+      <li class="fiche" data-etat="encours"><span class="gauche"><span class="id">EXP1</span></span>
+        <details open><summary><span class="titre">Charger les trois sources</span><span class="etat">En cours</span></summary>
+        <span class="note">Le module charge le CSV, les JSON et les recherches, et compare CSV et JSON. Ne dépend de rien.</span></details></li>
+      <li class="fiche" data-attend><span class="gauche"><span class="id">EXP2</span></span>
+        <details><summary><span class="titre">Décrire chaque colonne</span><span class="etat">Après EXP1</span></summary>
+        <span class="note">Le profil de chaque colonne : nature, taux de vides, formats mélangés. Dépend de EXP1.</span></details></li>
+      <li class="fiche" data-attend><span class="gauche"><span class="id">EXP3</span></span>
+        <details><summary><span class="titre">Chercher doublons, valeurs aberrantes et incohérences</span><span class="etat">Après EXP1</span></summary>
+        <span class="note">Les doublons, les valeurs aberrantes et les incohérences métier, une règle nommée par contrôle. Dépend de EXP1.</span></details></li>
+      <li class="fiche" data-attend><span class="gauche"><span class="id">EXP4</span></span>
+        <details><summary><span class="titre">Écrire le notebook de diagnostic</span><span class="etat">Après EXP2, EXP3</span></summary>
+        <span class="note">Le notebook de diagnostic, qui appelle le module et ne recopie aucun calcul. Dépend de EXP2 et EXP3.</span></details></li>
+    </ul>
+    <!-- hors fiches (coupé aux commits `<ID> :` seulement) et total, absents si rien n'est mesuré -->
+  </section>
+
+  <!-- ZONE:blocage — publiée quand /tache s'arrête après deux tentatives ; retirée dès que la fiche repasse -->
+  <section hidden>
+    <h2>Arrêt sur blocage</h2>
+    <div class="blocage">
+      <p></p>
+      <pre></pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>Journal des décisions</h2>
+    <!-- ZONE:journal — une ligne par décision imprévue tranchée en cours de fiche -->
+    <ul class="journal">
+    </ul>
+  </section>
+
+  <footer>
+    <span>Fichier de fiches : <span class="mono">context AI/02-exploration.md</span></span>
+    <span>Mis à jour le <span class="mono">2026-11-02</span></span>
+  </footer>
+</div>
+<script src="vlp.js"></script>
