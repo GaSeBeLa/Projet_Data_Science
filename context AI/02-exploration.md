@@ -85,8 +85,9 @@ comptes de `compare_sources` (annonces seules d'un côté, valeurs différentes)
 ---
 
 <!-- FICHE:EXP2 -->
-## EXP2 [ ] — Décrire chaque colonne
+## EXP2 [x] — Décrire chaque colonne
 
+**Session** : d5acd338-4c0e-4548-8f35-05a31a1533a1
 **Dépend de** : `EXP1`.
 **Fichiers** : `smart_immo/profile.py`, `tests/test_profile.py` (neufs) — et rien d'autre.
 

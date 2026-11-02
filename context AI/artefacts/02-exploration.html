@@ -21,9 +21,9 @@
     <p>Un notebook de diagnostic qui suit les 7 points de la Partie 1 du PDF, chaque observation appuyée sur un compte calculé par le module smart_immo testé.</p>
     <!-- ZONE:avancement — un span par fiche, dans l'ordre, même data-etat que la fiche -->
     <div class="avancement">
-      <span data-etat="faite"></span><span data-etat="encours"></span><span></span><span></span>
+      <span data-etat="faite"></span><span data-etat="faite"></span><span data-etat="encours"></span><span></span>
     </div>
-    <p class="mono" style="margin-top:.5rem">4 fiches · 1 faite · en cours : EXP2</p>
+    <p class="mono" style="margin-top:.5rem">4 fiches · 2 faites · en cours : EXP3</p>
   </header>
 
   <!-- ZONE:bilan — remplie à la clôture, en même temps que « clos » en tête du fichier de fiches -->
@@ -41,19 +41,20 @@
       <li class="fiche" data-etat="faite"><span class="gauche"><span class="id">EXP1</span></span>
         <details><summary><span class="titre">Charger les trois sources</span><span class="etat">Faite</span></summary>
         <span class="note">pytest 11 passed ; mutant tué (1 failed) ; vraies données : CSV 2556x36, JSON 2556x37, recherches 5x11 ; seules CSV 0, seules JSON 0 ; 124 valeurs différentes, toutes photos (CSV vide, JSON liste vide)</span></details>
-        <span class="cout mono">≈7,7M (7 715 958) · 40 tours · 2,76 $</span></li>
-      <li class="fiche" data-etat="encours"><span class="gauche"><span class="id">EXP2</span></span>
-        <details open><summary><span class="titre">Décrire chaque colonne</span><span class="etat">En cours · EXP3 peut partir en même temps</span></summary>
-        <span class="note">Le profil de chaque colonne : nature, taux de vides, formats mélangés. Dépend de EXP1.</span></details></li>
-      <li class="fiche"><span class="gauche"><span class="id">EXP3</span></span>
-        <details><summary><span class="titre">Chercher doublons, valeurs aberrantes et incohérences</span><span class="etat">À lancer · en même temps que EXP2</span></summary>
+        <span class="cout mono">≈8,1M (8 052 929) · 43 tours · 2,87 $</span></li>
+      <li class="fiche" data-etat="faite"><span class="gauche"><span class="id">EXP2</span></span>
+        <details><summary><span class="titre">Décrire chaque colonne</span><span class="etat">Faite</span></summary>
+        <span class="note">24 passed ; mutant blanc→rempli : 4 failed ; pyright 0 errors ; 36 colonnes profilées ; prix : 2174 nombre nu, 382 nombre + € ; date_publication : 6 formats, 0 autre</span></details>
+        <span class="cout mono">≈8,7M (8 748 402) · 72 tours · 4,13 $</span></li>
+      <li class="fiche" data-etat="encours"><span class="gauche"><span class="id">EXP3</span></span>
+        <details open><summary><span class="titre">Chercher doublons, valeurs aberrantes et incohérences</span><span class="etat">En cours</span></summary>
         <span class="note">Les doublons, les valeurs aberrantes et les incohérences métier, une règle nommée par contrôle. Dépend de EXP1.</span></details></li>
       <li class="fiche" data-attend><span class="gauche"><span class="id">EXP4</span></span>
-        <details><summary><span class="titre">Écrire le notebook de diagnostic</span><span class="etat">Après EXP2, EXP3</span></summary>
+        <details><summary><span class="titre">Écrire le notebook de diagnostic</span><span class="etat">Après EXP3</span></summary>
         <span class="note">Le notebook de diagnostic, qui appelle le module et ne recopie aucun calcul. Dépend de EXP2 et EXP3.</span></details></li>
     </ul>
-    <p class="mono cout-hors">Hors fiches : ≈8,8M (8 780 915) · 28 tours · 2,75 $</p>
-    <p class="mono cout-total">Coût du chantier : ≈16,5M (16 496 873) · 68 tours · 5,51 $</p>
+    <p class="mono cout-hors">Hors fiches : ≈11,0M (10 967 715) · 45 tours · 3,49 $</p>
+    <p class="mono cout-total">Coût du chantier : ≈27,8M (27 769 046) · 160 tours · 10,49 $</p>
     <!-- hors fiches (coupé aux commits `<ID> :` seulement) et total, absents si rien n'est mesuré -->
   </section>
 
@@ -70,6 +71,7 @@
     <h2>Journal des décisions</h2>
     <!-- ZONE:journal — une ligne par décision imprévue tranchée en cours de fiche -->
     <ul class="journal">
+      <li><time datetime="2026-11-02">2026-11-02</time><span>EXP2 : les 402 dates à tirets sont en mois-jour-année (1er nombre &gt; 12 : 0 fois, 2e : 227 fois) ; format nommé MM-JJ-AAAA, retouche du test autorisée par Seb</span></li>
     </ul>
   </section>
 

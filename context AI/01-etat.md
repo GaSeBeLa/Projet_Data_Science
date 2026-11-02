@@ -42,3 +42,7 @@ de ce que le code dit déjà.
   (l'audit SQL du Fil Rouge est un chantier à part) ; un dépôt à part ; module Python
   testé + notebook ; données de l'énoncé en lecture seule ; tout est versionné, le
   livrable pour la prof se fera à la fin.
+
+- **2026-11-02** — EXP2 : les 402 dates à tirets de `date_publication` sont en
+  **mois-jour-année** (1er nombre > 12 : 0 fois, 2e : 227 fois), celles à `/` en
+  jour-mois ; format nommé « MM-JJ-AAAA ». Seb a autorisé la retouche du test (`987d628`).
