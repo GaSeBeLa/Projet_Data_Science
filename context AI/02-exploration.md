@@ -58,8 +58,9 @@ problématique (Partie 3), l'audit de la base SQL du Fil Rouge.
 ---
 
 <!-- FICHE:EXP1 -->
-## EXP1 [ ] — Charger les trois sources
+## EXP1 [x] — Charger les trois sources
 
+**Session** : 29c1d8d8-d279-426a-a4f3-e3ac6c27d2d1
 **Dépend de** : rien.
 **Fichiers** : `smart_immo/__init__.py`, `smart_immo/load.py`, `tests/test_load.py`,
 `requirements.txt`, `README.md`, `.gitignore` (neufs, sauf `README.md`) — et rien d'autre.

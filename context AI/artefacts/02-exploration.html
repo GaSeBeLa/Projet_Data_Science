@@ -21,9 +21,9 @@
     <p>Un notebook de diagnostic qui suit les 7 points de la Partie 1 du PDF, chaque observation appuyée sur un compte calculé par le module smart_immo testé.</p>
     <!-- ZONE:avancement — un span par fiche, dans l'ordre, même data-etat que la fiche -->
     <div class="avancement">
-      <span data-etat="encours"></span><span></span><span></span><span></span>
+      <span data-etat="faite"></span><span data-etat="encours"></span><span></span><span></span>
     </div>
-    <p class="mono" style="margin-top:.5rem">4 fiches · 0 faite · en cours : EXP1</p>
+    <p class="mono" style="margin-top:.5rem">4 fiches · 1 faite · en cours : EXP2</p>
   </header>
 
   <!-- ZONE:bilan — remplie à la clôture, en même temps que « clos » en tête du fichier de fiches -->
@@ -38,19 +38,22 @@
     <h2>Les fiches, dans l'ordre des dépendances</h2>
     <!-- ZONE:fiches — data-etat vaut faite | encours | bloquee ; absent = à faire -->
     <ul class="fiches">
-      <li class="fiche" data-etat="encours"><span class="gauche"><span class="id">EXP1</span></span>
-        <details open><summary><span class="titre">Charger les trois sources</span><span class="etat">En cours</span></summary>
-        <span class="note">Le module charge le CSV, les JSON et les recherches, et compare CSV et JSON. Ne dépend de rien.</span></details></li>
-      <li class="fiche" data-attend><span class="gauche"><span class="id">EXP2</span></span>
-        <details><summary><span class="titre">Décrire chaque colonne</span><span class="etat">Après EXP1</span></summary>
+      <li class="fiche" data-etat="faite"><span class="gauche"><span class="id">EXP1</span></span>
+        <details><summary><span class="titre">Charger les trois sources</span><span class="etat">Faite</span></summary>
+        <span class="note">pytest 11 passed ; mutant tué (1 failed) ; vraies données : CSV 2556x36, JSON 2556x37, recherches 5x11 ; seules CSV 0, seules JSON 0 ; 124 valeurs différentes, toutes photos (CSV vide, JSON liste vide)</span></details>
+        <span class="cout mono">≈7,7M (7 715 958) · 40 tours · 2,76 $</span></li>
+      <li class="fiche" data-etat="encours"><span class="gauche"><span class="id">EXP2</span></span>
+        <details open><summary><span class="titre">Décrire chaque colonne</span><span class="etat">En cours · EXP3 peut partir en même temps</span></summary>
         <span class="note">Le profil de chaque colonne : nature, taux de vides, formats mélangés. Dépend de EXP1.</span></details></li>
-      <li class="fiche" data-attend><span class="gauche"><span class="id">EXP3</span></span>
-        <details><summary><span class="titre">Chercher doublons, valeurs aberrantes et incohérences</span><span class="etat">Après EXP1</span></summary>
+      <li class="fiche"><span class="gauche"><span class="id">EXP3</span></span>
+        <details><summary><span class="titre">Chercher doublons, valeurs aberrantes et incohérences</span><span class="etat">À lancer · en même temps que EXP2</span></summary>
         <span class="note">Les doublons, les valeurs aberrantes et les incohérences métier, une règle nommée par contrôle. Dépend de EXP1.</span></details></li>
       <li class="fiche" data-attend><span class="gauche"><span class="id">EXP4</span></span>
         <details><summary><span class="titre">Écrire le notebook de diagnostic</span><span class="etat">Après EXP2, EXP3</span></summary>
         <span class="note">Le notebook de diagnostic, qui appelle le module et ne recopie aucun calcul. Dépend de EXP2 et EXP3.</span></details></li>
     </ul>
+    <p class="mono cout-hors">Hors fiches : ≈8,8M (8 780 915) · 28 tours · 2,75 $</p>
+    <p class="mono cout-total">Coût du chantier : ≈16,5M (16 496 873) · 68 tours · 5,51 $</p>
     <!-- hors fiches (coupé aux commits `<ID> :` seulement) et total, absents si rien n'est mesuré -->
   </section>
 
