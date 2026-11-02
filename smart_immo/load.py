@@ -20,7 +20,7 @@ ENV_VAR = "SMART_IMMO_DATA"
 
 # Chemin par défaut, relatif à la racine du dépôt (voisin du dépôt).
 DEFAULT_RELATIVE_DIR = Path(
-    "../ProjetFileRouge/Fil-Rouge-EISI-Data-IA-26-D04-StarterPack/fixtures/annonces"
+    "../Fil-Rouge-EISI-Data-IA-26-D04-StarterPack/fixtures/annonces"
 )
 
 REPO_ROOT = Path(__file__).resolve().parents[1]

@@ -28,7 +28,7 @@
 Les règles que toute fiche respecte, quel que soit son sujet. Trois ou quatre,
 pas quinze — celles qu'on regrette de ne pas avoir écrites.
 
-- **Le Starter Pack est en lecture seule** (`../ProjetFileRouge/Fil-Rouge-EISI-Data-IA-26-D04-StarterPack*/`) :
+- **Le Starter Pack est en lecture seule** (`../Fil-Rouge-EISI-Data-IA-26-D04-StarterPack*/`) :
   jamais modifié, jamais copié dans ce dépôt ; on le lit par un chemin relatif réglable.
 - **Aucun chiffre ni résultat inventé** : tout compte vient d'une mesure rejouable
   (consigne du PDF, § 7 « Ne présentez pas de performances non mesurées »).

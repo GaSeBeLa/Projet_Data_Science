@@ -20,7 +20,7 @@ un autre chantier) ; module Python testé + notebook ; données de l'énoncé en
 
 **Les données** — dossier `fixtures/annonces/` du Starter Pack du Fil Rouge, **lu en place**,
 jamais copié ni modifié. Chemin par défaut, relatif à la racine du dépôt :
-`../ProjetFileRouge/Fil-Rouge-EISI-Data-IA-26-D04-StarterPack/fixtures/annonces/` ;
+`../Fil-Rouge-EISI-Data-IA-26-D04-StarterPack/fixtures/annonces/` ;
 réglable par la variable d'environnement `SMART_IMMO_DATA` (un coéquipier n'a pas la même arborescence).
 
 | Fichier | Contenu mesuré le 2026-11-02 |

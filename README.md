@@ -17,7 +17,7 @@ Les données sont celles du Starter Pack du Fil Rouge, lues en place et jamais
 copiées dans ce dépôt.
 
 - Par défaut, le module cherche
-  `../ProjetFileRouge/Fil-Rouge-EISI-Data-IA-26-D04-StarterPack/fixtures/annonces/`,
+  `../Fil-Rouge-EISI-Data-IA-26-D04-StarterPack/fixtures/annonces/`,
   à côté de ce dépôt.
 - Sinon, posez la variable d'environnement `SMART_IMMO_DATA` vers ce dossier
   `fixtures/annonces` :

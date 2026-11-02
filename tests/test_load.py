@@ -34,6 +34,18 @@ def test_data_dir_missing_folder_raises_clear_error(tmp_path, monkeypatch):
         load.data_dir()
 
 
+def test_data_dir_default_is_sibling_starter_pack(monkeypatch):
+    """Sans variable, le Starter Pack est cherché à côté du dépôt (même dossier parent)."""
+    monkeypatch.delenv("SMART_IMMO_DATA", raising=False)
+    expected = (
+        load.REPO_ROOT.parent
+        / "Fil-Rouge-EISI-Data-IA-26-D04-StarterPack"
+        / "fixtures"
+        / "annonces"
+    )
+    assert (load.REPO_ROOT / load.DEFAULT_RELATIVE_DIR).resolve() == expected.resolve()
+
+
 # --- load_annonces_csv ------------------------------------------------------
 
 
