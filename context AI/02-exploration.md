@@ -90,6 +90,8 @@ comptes de `compare_sources` (annonces seules d'un côté, valeurs différentes)
 **Dépend de** : `EXP1`.
 **Fichiers** : `smart_immo/profile.py`, `tests/test_profile.py` (neufs) — et rien d'autre.
 
+**Tests** : modifiés — format MM-JJ-AAAA mal nommé, typage pyright
+
 **Prompt**
 Écris `profile_columns(df)` : une ligne par colonne avec son nombre de valeurs, son **taux
 de vides** (vide ou blanc = vide), son nombre de valeurs distinctes, et sa **nature
